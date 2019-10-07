@@ -1,0 +1,43 @@
+\chapter[Introdução]{Introdução}
+\label{introducao}
+%TCC:
+% Contextualização, problema, hipótese, objetivo geral, objetivos específicos, resultados esperados.
+
+
+
+% BigData
+% KDD -> Mineraçao de dados -> Tarefas descritivas -> Subgrupos
+% Sistemas distribuidos
+% 
+
+O avanço acelerado da tecnologia apresentou diversos desafios para a computação, um deles foi o processamento de dados massivos. Segundo estudos \cite{hilbert2011world, gantz2012digital}, a produção de dados cresce de maneira exponencial, sendo expectativa para o ano de 2025 um montante de 44 zettabytes de dados \cite{Cassidy2019Mar}. 
+
+É de se esperar que tamanha quantidade de dados agregue em si uma proporção tão grande quanto de conhecimento. O processo de extração de conhecimento de bases de dados é conhecido como KDD. O termo foi cunhado em 1989 durante o primeiro workshop de \textit{Knowlegde Discovery in Databases} (KDD), sendo seu objetivo enfatizar que a resposta de uma exploração orientada a dados é o conhecimento \cite{piatetsky1995knowledge}.
+
+O KDD é composto por 5 fases onde a descoberta de conhecimento propriamente dita é realizada na etapa de mineração de dados. Segundo \citeonline{fayyad1996knowledge} o processo de mineração de dados é responsável pela extração de padrões antes desconhecidos, contudo potencialmente interessantes na descoberta de conhecimento.
+
+De acordo com \citeonline{fayyad1996knowledge} a mineração de dados pode ser segmentada em dois objetivos (1) verificação, onde o sistema busca somente validar a hipótese do usuário e (2) descoberta, no qual a aplicação de maneira autônoma (inteligente) encontra novos padrões. A tarefa de descoberta, por sua vez, pode ser recortada em dois outros domínios: predição e descrição, sendo que o primeiro proposita a predição de um futuro comportamento, enquanto o último buscar apresentar padrões de maneira facilmente compreensível por humanos.
+
+Pertencendo a ambos os grupos \cite{novak2009supervised}, a mineração de subgrupos busca encontrar conjuntos interessantes dentre a população, correspondendo o interesse a uma distribuição não usual daqueles em relação aos seus pares de acordo com uma determinada característica \cite{wrobel1997algorithm}, podendo essa ser formalizada por uma classe ou uma função de qualidade.
+
+O artigo em que este trabalho se baseia define a excepcionalidade (interesse) como uma combinação de características presentes na descrição de vértices de um grafo \cite{bendimerad2016unsupervised}. O âmbito de mineração de subgrupos em grafos introduz duas novas complexidades ao processamento de grandes volumes de dados: o isomorfismo de subgrafos e a possibilidade de que um grafo seja composto por bilhões de vértices e aresta e.g. redes sociais e a própria internet \cite{malewicz2010pregel}. 
+
+% sistemas distribuídos
+
+Por necessitar explorar cada possível valor de sua medida de interesse \cite{novak2009supervised}, a tarefa de minerar subgrupos tem caráter altamente combinacional, podendo essa atingir ordens fatoriais de magnitude \cite{han2007frequent, jiang2013survey}, cenário impraticável em máquinas únicas com recursos limitados. A alternativa se apresenta na adoção de sistemas de processamento distribuído.
+
+Os sistemas distribuídos tem por objetivo a descentralização do processamento dos dados, em virtude da limitação dos recursos dispostos em um único computador. O precursor desse movimento foi o artigo ``The Google file system'' \cite{ghemawat2003google} que apresentou a forma como o Google estruturava o seu sistema de arquivos para armazenamento dos suas extensas bases de dados. Tal trabalho foi responsável pelo nascimento de sistemas como o Hadoop File System (HDFS) \cite{shvachko2010hadoop}. 
+
+A partir do conhecimento de como sistemas de armazenamento poderiam ser construídos de maneira distribuída, o próximo passo se deu na forma como esses poderiam ser processados. Uma das respostas veio através do artigo ``MapReduce: Simplified data processing on large clusters'' \cite{dean2008mapreduce}. Estratégia do Google, o MapReduce mostrou que era possível executar diversas análises sobre dados de larga escala por meio de duas operações: \textit{map} e \textit{reduce}, com entidades representadas a partir de chave e valor.
+
+Contudo, ao observar que a abordagem de \citeonline{dean2008mapreduce} não oferecia suporte à abstrações reutilizáveis de seus conceitos, algoritmos iterativos e ferramentas interativas de mineração de dados, \citeonline{zaharia2012resilient} propuseram o sistema resiliente de conjuntos de dados distribuídos, os RDDs, uma abstração que permitia a reutilização de dados em uma ampla variedade de aplicações.
+
+Através do mesmo trabalho, \citeonline{zaharia2012resilient} introduziram o \textit{Spark}, uma interface desenvolvida na linguagem Scala, com o objetivo de oferecer ao programa uma maneira eficiente de adotar uma linguagem de programação de uso geral na execução, em memória, de tarefas interativas de mineração de dados, obtendo velocidade de resposta 20$\times$ mais rápida que o Hadoop. 
+
+
+
+% preguel
+% outros estudos
+% fractal
+
+% Bloqueiei em como introduzir o fractal aqui

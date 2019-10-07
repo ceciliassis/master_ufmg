@@ -1,0 +1,120 @@
+\documentclass[
+	12pt, %
+	openright, 
+	oneside, %
+	%twoside, %TCC: Se seu texto tem mais de 100 páginas, 	descomente esta linha e comente a anterior
+	a4paper,    %
+	%english,   %
+	brazil
+]{facom-ufu-abntex2}
+
+\usepackage{caption}
+\usepackage{float}
+\usepackage{makecell}
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+
+\titulo{Projeto de Dissertação de Mestrado} %TCC
+\autor{Cecília Regina Oliveira de Assis} %TCC
+\data{2019}
+\orientador{Prof. Dr. Renato Vimieiro} %TCC
+% \coorientador{Prof. Dr. Murillo Carneiro} %TCC
+
+% \hypersetup{pdfkeywords={palavra 1}{palavra 2}{palavra 4}{palavra 4}{palavra 5}} %TCC
+
+\begin{document}
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+%\pretextual
+\imprimircapa
+
+% % ---
+% % inserir lista de ilustrações
+% % ---
+% \pdfbookmark[0]{\listfigurename}{lof}
+% \listoffigures*
+% \cleardoublepage
+% % ---
+
+% % ---
+% % inserir lista de tabelas
+% % ---
+% \pdfbookmark[0]{\listtablename}{lot}
+% \listoftables*
+% \cleardoublepage
+% % ---
+
+
+
+% ---
+% inserir lista de abreviaturas e siglas 
+% ---
+
+% ORGINIZAR ALFABETICAMENTE?
+% \begin{siglas} %TCC:
+% 	\item [SD] Subgroup Discovery
+% 	\item [ML] Machine Learning
+% \end{siglas}
+% ---
+
+%% ---
+%% inserir lista de símbolos, se for adequado ao trabalho. %TCC:
+%% ---
+%\begin{simbolos}
+%  \item[$ \Gamma $] Letra grega Gama
+%  \item[$ \Lambda $] Lambda
+%  \item[$ \zeta $] Letra grega minúscula zeta
+%  \item[$ \in $] Pertence
+%\end{simbolos}
+%% ---
+
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+
+% ----------------------------------------------------------
+% Introdução
+% ----------------------------------------------------------
+
+
+
+\include{intro}
+\include{rev_bib}
+\include{metodologia}
+\include{cronograma}
+\include{resultados}
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{refs}
+
+
+
+\printindex
+
+
+
+\end{document}
